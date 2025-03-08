@@ -1,0 +1,14 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-reusable-workflow:
+    uses: kirandevops1993/RepoB/.github/workflows/reusable-ci.yml@main
+    with:
+      repo_url: 'https://github.com/kirandevops1993/REPO-A.git'
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
