@@ -9,4 +9,4 @@ jobs:
   call-reusable-workflow:
     uses: kirandevops1993/Repo-B/.github/workflows/reusable-ci.yml@main
     with:
-      repo_url: ${{ secrets.REPO_A_URL }}
+      repo_url: https://${{ secrets.PAT_TOKEN }}@github.com/kirandevops1993/REPO-A.git
