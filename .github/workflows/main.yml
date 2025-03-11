@@ -7,7 +7,37 @@ on:
 
 jobs:
   call-reusable-workflow:
+    runs-on: ubuntu-latest
+    needs: setup-environment
+    outputs:
+      build_status: ${{ steps.build-step.outputs.status }}
     uses: kirandevops1993/Repo-B/.github/workflows/reusable-ci.yml@main
     with:
-      repo_url: https://github.com/kirandevops1993/REPO-A.git
+      repo_url: "https://github.com/kirandevops1993/REPO-A.git"
       maven-goal: "clean install"
+    env:
+      GLOBAL_VAR: "Build Started"
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    continue-on-error: false
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    concurrency:
+      group: ci-${{ github.ref }}
+      cancel-in-progress: true
+
+  setup-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Environment Variables
+        run: echo "Setting up environment variables"
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: call-reusable-workflow
+    if: success()
+    steps:
+      - name: Send Notification
+        run: echo "Build Successful!"
