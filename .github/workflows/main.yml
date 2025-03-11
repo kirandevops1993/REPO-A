@@ -8,6 +8,5 @@ on:
 jobs:
   call-reusable-workflow:
     uses: kirandevops1993/Repo-B/.github/workflows/reusable-ci.yml@main
-    with:
-      maven-goal: "test"
+   
       
