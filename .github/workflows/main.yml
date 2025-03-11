@@ -11,10 +11,3 @@ jobs:
     with:
       repo_url: https://github.com/kirandevops1993/REPO-A.git
       maven-goal: "clean install"
-      
-
-
-
-    
-   
-      
