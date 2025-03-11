@@ -8,7 +8,7 @@ on:
 jobs:
   call-reusable-workflow:
    uses: kirandevops1993/Repo-B/.github/workflows/reusable-ci.yml@main
-    with:
+   with:
       repo_url: "https://github.com/kirandevops1993/REPO-A.git"
       maven-goal: "clean install"
     runs-on: ubuntu-latest
