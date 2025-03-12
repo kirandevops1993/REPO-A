@@ -11,15 +11,7 @@ jobs:
     with:
       repo_url: "https://github.com/kirandevops1993/REPO-A.git"
       maven-goal: "clean install"
-    env:
-      MAVEN_OPTS: "-Xmx1024m"
-    timeout-minutes: 10
-    continue-on-error: false
-    permissions:
-      contents: read
-    concurrency:
-      group: ci-pipeline
-      cancel-in-progress: true
+    # 'env', 'timeout-minutes', and 'continue-on-error' are not allowed here
 
   setup-environment:
     runs-on: ubuntu-latest
@@ -29,7 +21,7 @@ jobs:
         run: echo "Setting up environment variables"
         env:
           ENV_TYPE: "production"
-        timeout-minutes: 2
+    timeout-minutes: 2
 
   notify:
     runs-on: ubuntu-latest
