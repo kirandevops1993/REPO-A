@@ -4,6 +4,7 @@ with parameters
 with maven goal 
 with mvn test 
 strategy 
+change permisssions
 testing with maven 
 running with maven 
 wihtout running war 
