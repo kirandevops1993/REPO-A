@@ -11,7 +11,6 @@ jobs:
     with:
       repo_url: "https://github.com/kirandevops1993/REPO-A.git"
       maven-goal: "clean install"
-    # 'env', 'timeout-minutes', and 'continue-on-error' are not allowed here
 
   setup-environment:
     runs-on: ubuntu-latest
