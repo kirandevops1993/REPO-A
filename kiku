@@ -3,6 +3,7 @@ checking github demo
 with parameters
 with maven goal 
 with mvn test 
+strategy 
 testing with maven 
 running with maven 
 wihtout running war 
