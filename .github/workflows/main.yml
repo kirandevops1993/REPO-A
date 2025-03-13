@@ -24,8 +24,7 @@ jobs:
 
   notify:
     runs-on: ubuntu-latest
-    needs: call-reusable-workflow
-    if: success()
+    needs: [call-reusable-workflow, setup-environment]
     steps:
       - name: Send Notification
         run: echo "Build Successful!"
