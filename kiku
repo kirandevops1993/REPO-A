@@ -11,6 +11,7 @@ wihtout running war
 building with maven goal
 maven input added 
 indentation fixed
+removed none 
 permissions 
 memory limit 
 mvn |
