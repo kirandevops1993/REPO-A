@@ -2,6 +2,7 @@ Hello "github actions"
 defaults
 depend on 
 errors
+working dir
 error
 checking github demo
 with parameters
