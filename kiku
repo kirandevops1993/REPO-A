@@ -17,6 +17,7 @@ permissions
 changed read
 memory limit 
 mvn |
+default 
 read write 
 permissions 
 artifact version 
