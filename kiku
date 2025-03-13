@@ -1,6 +1,7 @@
 Hello "github actions"
 defaults
 depend on 
+errors
 error
 checking github demo
 with parameters
