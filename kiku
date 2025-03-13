@@ -1,6 +1,7 @@
 Hello "github actions"
 defaults
 depend on 
+write
 errors
 working dir
 error
