@@ -1,6 +1,7 @@
 Hello "github actions"
 defaults
 depend on 
+error
 checking github demo
 with parameters
 with maven goal 
