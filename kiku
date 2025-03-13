@@ -18,6 +18,7 @@ mvn |
 read write 
 permissions 
 artifact version 
+contents read 
 workflow change 
 docker image changed 
 error resolved 
