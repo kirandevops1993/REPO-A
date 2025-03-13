@@ -3,6 +3,7 @@ defaults
 checking github demo
 with parameters
 with maven goal 
+clean up 
 with mvn test 
 strategy 
 change permisssions
